@@ -1,0 +1,26 @@
+{% extends "network/layout.html" %}{% load static %} {% block body %}
+<section id="all_posts" style="display: none">
+  <h1>All posts</h1>
+  <hr />
+  {% if user.is_authenticated %}
+  <button class="btn" id="new_post">New post</button>
+  {% endif %}
+  <section id="modal_post">
+    <section id="post"></section>
+  </section>
+  <section id="posts"></section>
+</section>
+<section id="following" style="display: none">
+  <h1>Following</h1>
+  <hr />
+  <button class="btn" id="new_post">New post</button>
+  <section id="modal_post">
+    <section id="post"></section>
+  </section>
+  <section id="following_posts"></section>
+</section>
+<section id="profile_page"></section>
+<div class="spinner">
+  <div></div>
+</div>
+{% endblock %} {% block script %} {% endblock %}

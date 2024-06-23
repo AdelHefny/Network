@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  height: 100%;
+}
+.btn {
+  border-radius: 32px;
+  outline: 2px rgb(218, 218, 218) solid;
+  padding: 0 1rem;
+  transition: 0.3s;
+}
+#post {
+  position: absolute;
+  height: fit-content;
+  top: 50%;
+  left: 30%;
+  right: 30%;
+  transform: translateY(-200%);
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  transition: 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  #post {
+    left: 10%;
+    right: 10%;
+  }
+}
+#post form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.post_form textarea {
+  border: none;
+}
+#post form fieldset {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#modal_post {
+  position: fixed;
+  top: -100%;
+  background-color: rgba(0, 0, 0, 0.404);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#submit_btn {
+  background-color: black;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+#submit_btn:hover {
+  background-color: rgb(27, 27, 27);
+  color: white;
+}
+.exit_btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: transparent;
+  border: black 2px solid;
+}
+.image_btn {
+  background-color: black;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.image_btn:hover {
+  background-color: rgb(27, 27, 27);
+  color: white;
+}
+#new_post {
+  margin-bottom: 1rem;
+}
+#posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.post_card {
+  display: flex;
+  flex-direction: column;
+  border: 2px black solid;
+  min-width: 350px;
+  height: fit-content;
+}
+.post_card hr {
+  margin: 0;
+}
+.card_header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+.card_header img {
+  background-color: rgb(199, 199, 199);
+  border-radius: 50%;
+}
+.card_header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: black;
+}
+.card_header a h5 {
+  margin: 0;
+}
+.card_header h6 {
+  margin: 0;
+  font-weight: 400;
+  font-size: small;
+}
+.card_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card_body img {
+  max-width: 300px;
+  max-height: 250px;
+  object-fit: cover;
+  padding: 1rem 0;
+}
+.card_body p {
+  text-align: start;
+  width: 100%;
+  padding: 1rem;
+  border-top: 2px rgb(201, 201, 201) solid;
+  border-bottom: 2px rgb(201, 201, 201) solid;
+}
+.card_footer {
+  display: flex;
+  flex-direction: row;
+}
+.post_btn {
+  border: none;
+  border-top: solid black 2px;
+  border-right: solid black 2px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.post_btn h6 {
+  margin: 0;
+}
+.spinner {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  bottom: 1rem;
+  display: none;
+  transform: translateX(-50%);
+  right: 0;
+}
+.spinner::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: rotate 1s infinite ease-in-out;
+}
+.profile_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.profile_header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.followed {
+  background-color: black;
+  color: white;
+}
+.followed:hover {
+  color: white;
+  background-color: rgb(10, 10, 10);
+}
+.profile_header button {
+  max-width: 100%;
+  min-width: 8rem;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  90%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
